@@ -4,7 +4,7 @@ This repo contains the code produced by Shrey Poshiya during the summer 2021 int
 
 License: GNU General Public License v3.0	
 
-### What are Adversrial Examples
+### What are Adversarial Examples
 
 Recent developments in Deep Learning (DL) has allowed for its implementation into a wide array of applications. With deep learning being used in many saftey critical environments (healthcare, transortation, and the military sector), it is becoming increasingly important that these aritifical neural networks can succesfully identify their given inputs. 
 
