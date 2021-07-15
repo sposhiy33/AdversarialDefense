@@ -42,7 +42,8 @@ The folder has the following contents:
 
 **Adv_Gen_{NameOfDataset}.py** = this scripts generates adversarial images at a given epsilon value. Uses the generated adversarial images to test accuracy of the model when the adverarial images are fed in.
 
-**blur_{NameOfDataset}.py** = This script blurs the generated adverarial images. This should esentially "blur" out the perturbations in the image. The accuracy when the blurred adverarial images are used to test the accuracy of the model should be higher than when the adversarial images are used to test the accuracy (In fact the accuracy of the original dataset versus the blurred adversarial iamges was very close when a certain amount of "blurring" was applied. In my tests the discrpancy between the two accuracies was only -0.13% to -0.25%). 
+**blur_{NameOfDataset}.py** = This script blurs the generated adverarial images. This should esentially "blur" out the perturbations in the image. The accuracy when the blurred adverarial images are used to test the accuracy of the model should be higher than when the adversarial images are used to test the accuracy (In fact the accuracy of the original dataset versus the blurred adversarial iamges was very close when a certain amount of "blurring" was applied. In my tests the discrpancy between the two accuracies was only -0.13% to -0.25%). This scripts uses [Guassian Blurring](https://en.wikipedia.org/wiki/Gaussian_blur#:~:text=In%20image%20processing%2C%20a%20Gaussian,image%20noise%20and%20reduce%20detail.) to blur the adverarial images.
+
 
 
 ![image](https://user-images.githubusercontent.com/86625362/125684261-121ec6a9-114b-4149-8e0e-fcfa4b622c9d.png)
