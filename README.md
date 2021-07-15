@@ -1,4 +1,4 @@
-# AdversarialDefense
+# Adversarial Defense
 
 This repo contains the code produced by Shrey Poshiya during the summer 2021 internship at the [Institute for Computing in Research](https://computinginresearch.org/). 
 
