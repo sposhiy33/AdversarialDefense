@@ -48,23 +48,23 @@ The folder has the following contents:
 
 ## Intructions
 
+Install lastest version of python
+
+To install the required libraries, run the following ocmman in the terminal:
+
+`pip3 install matplotlib numpy scipy tensorflow`
+
 To clone this repo, run the following git command:
 
-`
-git clone https://github.com/sposhiy33/AdversarialDefense.git
-`
+`git clone https://github.com/sposhiy33/AdversarialDefense.git`
 
-Navigate to desired folder in terminal:
+Navigate to folder in terminal:
 
-`
-cd [FILE/PATH/HERE]
-`
+`cd [FILE/PATH/HERE]`
 
 From there, to run program, run the command:
 
-`
-python3 [enter file name here]
-`
+`python3 [enter file name here]`
 
 You can run any file independently.
 When you run a script, it sould start of by training the network
@@ -74,16 +74,3 @@ When you run a script, it sould start of by training the network
 ![image](https://user-images.githubusercontent.com/86625362/125684261-121ec6a9-114b-4149-8e0e-fcfa4b622c9d.png)
 
 Still yet to create section about strategies to combat adverarial attacks
-
-
-
-
-
-
-
-
-
-
-
-
-
