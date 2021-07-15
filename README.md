@@ -46,7 +46,7 @@ The folder has the following contents:
 
 **BEWARE**: Running these scripts take a toll on your hardware. Make sure to have plenty of free memory before running these programs. 
 
-### Intructions
+## Intructions
 
 To clone this repo, run the following git command:
 
