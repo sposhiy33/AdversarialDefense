@@ -24,7 +24,6 @@ def advesarial(image, label):
 
 
 
-
 ############
 #apply blur#
 ############
@@ -35,13 +34,15 @@ from scipy import ndimage
 rg = [*range(0, x_test.shape[0],1)]
 
 #blur coefficent (sigma)
-sig = [0, 0.2, 0.4, 0.6, 0.8 , 1, 1.2, 1.4, 1.6]
-sig_zoom = [0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95 ]
+sig = [0, 0.2, 0.4, 0.6, 0.8 , 1, 1.2, 1.4,]
+sig_zoom = [0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9]
 acc = []
 
 print("baseline accuracy:", model.evaluate(x_test, y_test_one_hot)[1])
-# 0.15 ep value
-for elements in sig_zoom:
+
+#0.15 ep value
+
+for elements in sig:
         # reset accuracy counter every interation 
     z = 0 
     

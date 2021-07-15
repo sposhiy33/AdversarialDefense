@@ -1,0 +1,4 @@
+*pyc
+MNIST/__pycache__
+Cifar10/__pycache__
+plot.py
