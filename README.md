@@ -50,15 +50,21 @@ The folder has the following contents:
 
 To clone this repo, run the following git command:
 
-`git clone https://github.com/sposhiy33/AdversarialDefense.git`
+`
+git clone https://github.com/sposhiy33/AdversarialDefense.git
+`
 
 Navigate to desired folder in terminal:
 
-`cd [FILE/PATH/HERE]`
+`
+cd [FILE/PATH/HERE]
+`
 
 From there, to run program, run the command:
 
-`python3 [enter file name here]`
+`
+python3 [enter file name here]
+`
 
 You can run any file independently.
 When you run a script, it sould start of by training the network
