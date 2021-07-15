@@ -38,9 +38,9 @@ This repo contains three different folders. Each folder contains scripts for thr
 
 The folder has the following contents:
 
-**{NameOfDataset}.py** = this script creates a [convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network) and train the network using [tensorflow.keras](https://keras.io/about/)
+**{NameOfDataset}.py** = This script creates a [convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network) and trains the network using [tensorflow.keras](https://keras.io/about/)
 
-**Adv_Gen_{NameOfDataset}.py** = this scripts generates adversarial images at a given epsilon value. Uses the generated adversarial images to test accuracy of the model when the adverarial images are fed in.
+**Adv_Gen_{NameOfDataset}.py** = This scripts generates adversarial images at a given epsilon value. It uses the generated adversarial images to test accuracy of the model.
 
 **blur_{NameOfDataset}.py** = This script blurs the generated adverarial images. This should esentially "blur" out the perturbations in the image. The accuracy when the blurred adverarial images are used to test the accuracy of the model should be higher than when the adversarial images are used to test the accuracy (In fact the accuracy of the original dataset versus the blurred adversarial iamges was very close when a certain amount of "blurring" was applied. In my tests the discrpancy between the two accuracies was only -0.13% to -0.25%). This scripts uses [Guassian Blurring](https://en.wikipedia.org/wiki/Gaussian_blur#:~:text=In%20image%20processing%2C%20a%20Gaussian,image%20noise%20and%20reduce%20detail.) to blur the adverarial images.
 
