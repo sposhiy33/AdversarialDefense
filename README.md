@@ -15,7 +15,7 @@ Here is an example of an adversraial example:
 
 ## How are Adversarial Examples Generated
 
-One popular strategy to produce adversarial examples is uing the Fast Gradient Sign Method (FGSM). This strategy exploits the gradient, a numeric calculation that gives us information on how to adjust the parameters of the model to minmize the deviation between the actual output and the output estimated by the network. The gradient is a vector that signals in which direction the loss in the [loss function](https://en.wikipedia.org/wiki/Loss_function) increases. In order to create a good neural network (in which the loss is minimized), we sould move in the opposite direction of the gradient and change the parameters of the model in accordance (esentailly we are finding the local minimum of the loss function). The Fast Sign Gradient Method uses the generated gradients to create an image that maximizes the loss/cost.
+One popular strategy to produce adversarial examples is uing the Fast Gradient Sign Method (FGSM). This strategy exploits the gradient, a numeric calculation that gives us information on how to adjust the parameters of the model to minmize the deviation between the actual output and the output estimated by the network. The gradient is a vector that signals in which direction the loss in the [loss function](https://en.wikipedia.org/wiki/Loss_function) increases. In order to create a good neural network (in which the loss is minimized), we sould move in the opposite direction of the gradient and change the parameters of the model in accordance (esentailly we are finding the local minimum of the loss function). The Fast Gradient Sign Method expoilts the generated gradients to create an image that maximizes the loss/cost.
 
 
 ![image](https://user-images.githubusercontent.com/86625362/125686603-1c5dfa98-3185-4515-84d4-e5be6c0e14e6.png)
@@ -26,7 +26,7 @@ One popular strategy to produce adversarial examples is uing the Fast Gradient S
 
 ![image](https://user-images.githubusercontent.com/86625362/125686859-85448ff8-4f98-43fa-86de-ab864ab41f72.png): The label of the Input Image
 
-![image](https://user-images.githubusercontent.com/86625362/125686911-7bdd529f-f2f9-4df6-b8ae-2408e17a087b.png): A constant that dictates the intensity of the perturbations (the noise) applied to the input image
+![image](https://user-images.githubusercontent.com/86625362/125686911-7bdd529f-f2f9-4df6-b8ae-2408e17a087b.png): Epsilon: A constant that dictates the intensity of the perturbations (the noise) applied to the input image
 
 ![image](https://user-images.githubusercontent.com/86625362/125687293-b09136fb-42bb-4f04-a8cd-ed0cad3c3f16.png): The Neural Network model
 
