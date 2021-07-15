@@ -6,7 +6,7 @@ License: [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.
 
 ## What are Adversarial Examples
 
-Recent developments in Deep Learning ([DL](https://en.wikipedia.org/wiki/Deep_learning)) has allowed for its implementation into a wide array of applications. With deep learning being used in many saftey critical environments (ex. [healthcare](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6945006/) and [transporation](https://mobility.mit.edu/machine-learning)), it is becoming increasingly important that these aritifical neural networks can succesfully identify the given inputs.
+Recent developments in Deep Learning ([DL](https://en.wikipedia.org/wiki/Deep_learning)) has allowed for its implementation into a wide array of applications. With deep learning being used in many saftey critical environments (ex. [healthcare](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6945006/) and [transporation](https://mobility.mit.edu/machine-learning)), it is becoming increasingly important that these [aritifical neural networks](https://en.wikipedia.org/wiki/Artificial_neural_network) can succesfully identify the given inputs.
 
 It is been found that carefully altered inputs, called [adversarial examples](https://arxiv.org/abs/1412.6572) can trick neural networks. These adversarial examples are usually produced by intentionally adding noise to the input image. The most dangerous aspect of these adversarial examples is that the difference between the original input image and the altered one is virtually imperceptable to the human eye. The combination of being able to fool the network while seeming harmless to the human poses a great danger to the validity of the neural nets. 
 
@@ -70,7 +70,6 @@ You can run any file independently.
 When you run a script, it sould start of by training the network
 
 
-
 ![image](https://user-images.githubusercontent.com/86625362/125684261-121ec6a9-114b-4149-8e0e-fcfa4b622c9d.png)
 
-Still yet to create section about strategies to combat adverarial attacks
+*Still yet to create section about strategies to combat adverarial attacks*
