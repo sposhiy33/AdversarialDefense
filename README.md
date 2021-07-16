@@ -52,19 +52,19 @@ Install lastest version of python
 
 To install the required libraries, run the following ocmman in the terminal:
 
-`pip3 install matplotlib numpy scipy tensorflow`
+`$ pip3 install matplotlib numpy scipy tensorflow`
 
 To clone this repo, run the following git command:
 
-`git clone https://github.com/sposhiy33/AdversarialDefense.git`
+`$ git clone https://github.com/sposhiy33/AdversarialDefense.git`
 
 Navigate to folder in terminal:
 
-`cd [FILE/PATH/HERE]`
+`$ cd [FILE/PATH/HERE]`
 
 From there, to run program, run the command:
 
-`python3 [enter file name here]`
+`$ python3 [enter file name here]`
 
 You can run any file independently.
 When you run a script, it sould start of by training the network
