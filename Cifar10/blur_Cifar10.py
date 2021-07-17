@@ -58,16 +58,13 @@ for numbers in epsilons:
             #Create advesarial images
             perturbations = advesarial(image.reshape(1, 32, 32, 3), image_label).numpy()
             adv_img = image + perturbations * numbers 
-            
-
             # Blur adverarial image (using guassian blurring)
             blur = ndimage.gaussian_filter(adv_img.reshape(32,32,3), sigma = elements)
-                    
-            blur_pred = model.predict(np.array([blur.reshape(32,32,3)]))
-                    
+
+            ### BLUR PRED       
+            blur_pred = model.predict(np.array([blur.reshape(32,32,3)]))      
             list_index = [0,1,2,3,4,5,6,7,8,9]
             x = blur_pred
-
             for i in range(10):
                 for j in range(10):
                     if x[0][list_index[i]] > x[0][list_index[j]]:
