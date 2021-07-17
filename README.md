@@ -1,4 +1,4 @@
-# AdversarialDefense
+# Adversarial Defense
 
 This repo contains the code produced by Shrey Poshiya during the summer 2021 internship at the [Institute for Computing in Research](https://computinginresearch.org/). 
 
@@ -6,7 +6,7 @@ License: [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.
 
 ## What are Adversarial Examples
 
-Recent developments in Deep Learning ([DL](https://en.wikipedia.org/wiki/Deep_learning)) has allowed for its implementation into a wide array of applications. With deep learning being used in many saftey critical environments (ex. [healthcare](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6945006/) and [transporation](https://mobility.mit.edu/machine-learning)), it is becoming increasingly important that these aritifical neural networks can succesfully identify the given inputs.
+Recent developments in Deep Learning ([DL](https://en.wikipedia.org/wiki/Deep_learning)) has allowed for its implementation into a wide array of applications. With deep learning being used in many saftey critical environments (ex. [healthcare](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6945006/) and [transporation](https://mobility.mit.edu/machine-learning)), it is becoming increasingly important that these [aritifical neural networks](https://en.wikipedia.org/wiki/Artificial_neural_network) can succesfully identify the given inputs.
 
 It is been found that carefully altered inputs, called [adversarial examples](https://arxiv.org/abs/1412.6572) can trick neural networks. These adversarial examples are usually produced by intentionally adding noise to the input image. The most dangerous aspect of these adversarial examples is that the difference between the original input image and the altered one is virtually imperceptable to the human eye. The combination of being able to fool the network while seeming harmless to the human poses a great danger to the validity of the neural nets. 
 
@@ -15,7 +15,7 @@ Here is an example of an adversraial example:
 
 ## How are Adversarial Examples Generated
 
-One popular strategy to produce adversarial examples is uing the Fast Sign Gradient Method (FSGM). This strategy exploits the gradient, a numeric calculation that gives us information on how to adjust the parameters of the model to minmize the deviation between the actual output and the output estimated by the network. The gradient is a vector that signals in which direction the loss in the [loss function](https://en.wikipedia.org/wiki/Loss_function) increases. In order to create a good neural network (in which the loss is minimized), we sould move in the opposite direction of the gradient and change the parameters of the model in accordance (esentailly we are finding the local minimum of the loss function). The Fast Sign Gradient Method uses the generated gradients to create an image that maximizes the loss/cost.
+One popular strategy to produce adversarial examples is uing the Fast Gradient Sign Method (FGSM). This strategy exploits the gradient, a numeric calculation that gives us information on how to adjust the parameters of the model to minmize the deviation between the actual output and the output estimated by the network. The gradient is a vector that signals in which direction the loss in the [loss function](https://en.wikipedia.org/wiki/Loss_function) increases. In order to create a good neural network (in which the loss is minimized), we sould move in the opposite direction of the gradient and change the parameters of the model in accordance (esentailly we are finding the local minimum of the loss function). The Fast Gradient Sign Method expoilts the generated gradients to create an image that maximizes the loss/cost.
 
 
 ![image](https://user-images.githubusercontent.com/86625362/125686603-1c5dfa98-3185-4515-84d4-e5be6c0e14e6.png)
@@ -26,7 +26,7 @@ One popular strategy to produce adversarial examples is uing the Fast Sign Gradi
 
 ![image](https://user-images.githubusercontent.com/86625362/125686859-85448ff8-4f98-43fa-86de-ab864ab41f72.png): The label of the Input Image
 
-![image](https://user-images.githubusercontent.com/86625362/125686911-7bdd529f-f2f9-4df6-b8ae-2408e17a087b.png): A constant that dictates the intensity of the perturbations (the noise) applied to the input image
+![image](https://user-images.githubusercontent.com/86625362/125686911-7bdd529f-f2f9-4df6-b8ae-2408e17a087b.png): Epsilon: A constant that dictates the intensity of the perturbations (the noise) applied to the input image
 
 ![image](https://user-images.githubusercontent.com/86625362/125687293-b09136fb-42bb-4f04-a8cd-ed0cad3c3f16.png): The Neural Network model
 
@@ -48,42 +48,28 @@ The folder has the following contents:
 
 ## Intructions
 
+Install lastest version of python
+
+To install the required libraries, run the following ocmman in the terminal:
+
+`$ pip3 install matplotlib numpy scipy tensorflow`
+
 To clone this repo, run the following git command:
 
-`
-git clone https://github.com/sposhiy33/AdversarialDefense.git
-`
+`$ git clone https://github.com/sposhiy33/AdversarialDefense.git`
 
-Navigate to desired folder in terminal:
+Navigate to folder in terminal:
 
-`
-cd [FILE/PATH/HERE]
-`
+`$ cd [FILE/PATH/HERE]`
 
 From there, to run program, run the command:
 
-`
-python3 [enter file name here]
-`
+`$ python3 [enter file name here]`
 
 You can run any file independently.
 When you run a script, it sould start of by training the network
 
 
-
 ![image](https://user-images.githubusercontent.com/86625362/125684261-121ec6a9-114b-4149-8e0e-fcfa4b622c9d.png)
 
-Still yet to create section about strategies to combat adverarial attacks
-
-
-
-
-
-
-
-
-
-
-
-
-
+*Still yet to create section about strategies to combat adverarial attacks*
