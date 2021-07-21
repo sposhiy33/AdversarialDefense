@@ -1,6 +1,6 @@
 # Libraries
-import Cifar10
-from Cifar10 import x_test, y_test, y_test_one_hot, model
+import fashion_MNIST
+from fashion_MNIST import x_test, y_test, y_test_one_hot, model
 import tensorflow as tf 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -20,7 +20,7 @@ def advesarial(image, label):
   return signed_grad
 
 def generate_adverarial(img , img_label, epsilon):
-    perturbations = advesarial(img.reshape(1, 32, 32, 3), img_label).numpy()
+    perturbations = advesarial(img.reshape(1, 28, 28, 1), img_label).numpy()
     global adv_img
     adv_img = img + perturbations * epsilon
     return adv_img 
@@ -69,13 +69,13 @@ for numbers in epsilons:
             # CREATE ADVERARIAL IMAGES
             generate_adverarial(image, image_label, numbers)
             # APPLY PERCENTILE FILTER
-            perc = ndimage.percentile_filter(adv_img, percentile = elements, size = 2)
+            perc = ndimage.percentile_filter(adv_img.reshape(28,28,1), percentile = elements, size = 2)
             # BLUR PRED       
             predict(perc)    
             if list_index[0] == image_label:
                 z = z + 1                     
         accuracy = z / 10000
-        print("ep value:", numbers, "sigma:", elements, 'acc:', accuracy, "diff:", base - accuracy)
+        print("ep value:", numbers, "percent:", elements, 'acc:', accuracy, "diff:", base - accuracy)
         acc.append(accuracy)
     print("ep value:", numbers, "acc:", acc)
     
@@ -89,11 +89,10 @@ for numbers in epsilons:
         # CREATE ADVERSARIAL IMAGES
         generate_adverarial(image, image_label, numbers)
         # BLUR ADVERAIRAL IMAGE (using guassian blurring)
-        percMAXperc = ndimage.percentile_filter(adv_img, percentile = max_x, size = 2)
+        percMAXperc = ndimage.percentile_filter(adv_img.reshape(28,28,1), percentile = max_x, size = 2)
         # PREDICTION      
         predict(percMAXperc)       
         if list_index[0] == image_label:
             maxsig_acc = maxsig_acc + 1                    
     maximum = maxsig_acc / 10000
     print("ep value:", numbers, "maximum accuracy:", maximum, "max_x:", max_x, "diff:", base - accuracy)
-

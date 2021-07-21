@@ -1,7 +1,8 @@
-import MNIST
+import fashion_MNIST
 import numpy
 import tensorflow as tf
-from MNIST import x_test, y_test, model
+from fashion_MNIST import x_test, y_test, model
+import matplotlib.pyplot as plt
 
 
 ######################
@@ -10,18 +11,13 @@ from MNIST import x_test, y_test, model
 
 
 def advesarial(image, label):
-
   image = tf.cast(image, tf.float32)
-
   with tf.GradientTape() as tape:
       tape.watch(image)
       prediction = model(image)
       loss = tf.keras.losses.MSE(label, prediction)
-  
   gradient = tape.gradient(loss, image)
-
   signed_grad = tf.sign(gradient)
-
   return signed_grad
 
 
@@ -36,37 +32,24 @@ for numbers in epsilons: # reset value before each iteration
   for i in range(len(rg)):
     image = x_test[i]
     image_label = y_test[i]
-    #Create perturbations
-    
+    #Create adversarial examples   
     perturbations = advesarial(image.reshape(1, 28, 28, 1), image_label).numpy()
-
-    # apply perturbations with epsilon(numbers)
-    
     adv_img = image + perturbations * numbers
-       
-
-    # go through each produced image and put it through the model to
-    # get prediction
-
+    # Get prediction of adversarial image
     adv_pred = model.predict(numpy.array([adv_img.reshape(28,28,1)]))
-
+    # compile prediction
     list_index = [0,1,2,3,4,5,6,7,8,9]
     x = adv_pred
-
     for i in range(10):
       for j in range(10):
         if x[0][list_index[i]] > x[0][list_index[j]]:
           temp = list_index[i]
           list_index[i] = list_index[j]
           list_index[j] = temp
-
-
     #Accuracy data 
     if list_index[0] == image_label: 
       z = z + 1
- 
   accuracy = z / 10000
   print("epsilon value:", numbers , 'acc:', accuracy)
   acc.append(accuracy)
-
 print(acc)
