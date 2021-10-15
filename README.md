@@ -72,4 +72,4 @@ When you run a script, it sould start of by training the network
 
 ![image](https://user-images.githubusercontent.com/86625362/125684261-121ec6a9-114b-4149-8e0e-fcfa4b622c9d.png)
 
-*Still yet to create section about strategies to combat adverarial attacks*
+
